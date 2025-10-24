@@ -1,0 +1,44 @@
+/* Footer styling */
+footer {
+  background-color: #1f1d24; /* dark subtle background */
+  color: #fff;
+  padding: 2rem 0;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 0.9rem;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.4); /* subtle shadow */
+}
+
+footer .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+footer a {
+  color: #ffae36; /* subtle accent */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  footer .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}

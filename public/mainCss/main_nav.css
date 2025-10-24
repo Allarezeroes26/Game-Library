@@ -1,0 +1,343 @@
+/* === Sidebar === */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #212121;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 1.5rem;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+
+.sidebar .logo {
+  font-family: "Bungee", sans-serif;  
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.sidebar .logo .GColor {
+  font-family: "Bungee", sans-serif;
+  color: #B71C1C;
+}
+
+.sidebar .links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar a,
+.sidebar .genre-dropbtn,
+.sidebar .platform-dropbtn {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.sidebar a:hover,
+.sidebar .genre-dropbtn:hover,
+.sidebar .platform-dropbtn:hover {
+  transform: scale(1.05);
+}
+
+/* Dropdowns*/
+.genre-dropdown,
+.platform-dropdown {
+  position: relative;
+}
+
+
+.genre-content,
+.platform-content {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  background: rgba(0,0,0,0.95);
+  border-radius: 8px;
+  min-width: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 5000;
+}
+
+
+.genre-content a,
+.platform-content a {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.genre-dropdown:hover .genre-content,
+.platform-dropdown:hover .platform-content {
+  display: none;
+}
+
+.container {
+  margin-left: 240px;  padding: 2rem;
+}
+
+/* ====== RESPONSIVE NAVIGATION ====== */
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+  .container {
+    margin-left: 220px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Hide sidebar by default */
+  .sidebar {
+    position: fixed;
+    left: -240px;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #212121;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* When active (visible) */
+  .sidebar.active {
+    left: 0;
+  }
+
+  /* Move main container back to full width */
+  .container {
+    margin-left: 0;
+    padding: 1.5rem;
+  }
+
+  /* === Hamburger Button === */
+  .menu-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1500;
+    background: crimson;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .menu-toggle:hover {
+    background: #a01313;
+  }
+
+  /* Make links bigger for tapping */
+  .sidebar a,
+  .sidebar .genre-dropbtn,
+  .sidebar .platform-dropbtn {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  /* Hide dropdowns when sidebar is closed */
+  .genre-content,
+  .platform-content {
+    left: 240px;
+    top: 60px;
+  }
+}
+
+/* ====== RESPONSIVE ====== */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+
+  .sidebar {
+    width: 200px;
+  }
+
+  /* Add hamburger menu on tablets */
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1500;
+    background: crimson;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .menu-toggle:hover {
+    background: #a01313;
+  }
+
+  /* Sidebar hidden by default on tablets */
+  .sidebar {
+    left: -240px;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  /* Container expands full width */
+  .container {
+    margin-left: 0;
+    padding: 1.5rem;
+  }
+
+  /* Games grid */
+  .game-collection {
+    width: 90%;
+    gap: 1rem;
+  }
+
+  .game {
+    flex: 1 1 14rem;
+    max-width: 16rem;
+  }
+
+  .game-content h2 {
+    font-size: 1rem;
+  }
+
+  .game-content p {
+    font-size: 0.85rem;
+  }
+
+  /* Sort title */
+  .gameSort h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* Search */
+  .searchy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .searchy input {
+    width: 70%;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+  }
+
+  .searchy button {
+    background: crimson;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .searchy button:hover {
+    background: #a01313;
+  }
+}
+
+/*Mobile screens*/
+@media (max-width: 600px) {
+
+  .container {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .menu-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1500;
+    background: crimson;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .menu-toggle:hover {
+    background: #a01313;
+  }
+
+  .searchy {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4.5rem;
+  }
+
+  .searchy input {
+    width: 90%;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .searchy button {
+    width: 60%;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .game-collection {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .game {
+    max-width: 90%;
+  }
+
+  .game-content {
+    padding: 0.8rem;
+  }
+
+  .game-content h2 {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .game-content p {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+}

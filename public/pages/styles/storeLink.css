@@ -1,0 +1,40 @@
+.store-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.store-link {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.store-link:hover {
+  background: #444;
+}
+.store-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.store-link {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.store-link:hover {
+  background: #444;
+}

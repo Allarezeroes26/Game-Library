@@ -1,0 +1,63 @@
+.pagination {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.prev, .next {
+  height: 3rem;
+  width: 5rem;
+  background-color: #B71C1C;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.prev:hover, .next:hover {
+  transform: scale(1.1);
+  background-color: #B71C1C;
+}
+
+.searchy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.game-search {
+  width: 100%;
+  max-width: 600px;
+  margin-right: 1rem;
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #9E9E9E;
+  background-color: #000000;
+  color: white;
+}
+
+.game-search::placeholder {
+  color: #aaa;
+}
+
+.search-button {
+  padding: 0.5rem 1rem;
+  background-color: #B71C1C;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.search-button:hover {
+  transform: scale(1.05);
+  background-color: #B71C1C;
+  color: white;
+}

@@ -1,0 +1,53 @@
+.trailer-slideshow {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.trailer-slideshow img.preview-trailer,
+.trailer-slideshow video {
+  display: block;
+  margin: 1rem auto;
+  max-width: 720px;   /* ✅ both will match this width */
+  width: 100%;        /* responsive but capped */
+  border-radius: 10px;
+}
+
+
+.trailer-name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.preview-trailer {
+  max-width: 640px;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.preview-trailer:hover {
+  transform: scale(1.02);
+}
+
+.trailer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.trailer-controls button {
+  background-color: #1B3C53;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.trailer-controls button:hover {
+  background-color: #29506a;
+}

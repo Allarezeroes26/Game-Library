@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #0B0B0B;
+  color: white;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+}
+
+.headers {
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  flex-wrap: wrap;
+}
+
+.G-El {
+  color: crimson;
+}
+
+.lib {
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.lib:hover {
+  transform: scale(1.1);
+}
+
+/* ===== INTRO SECTION ===== */
+.intro {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.intro h1 {
+  font-size: 4.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-size: 1.5rem;
+}
+
+.intro .introG {
+  color: crimson;
+}
+
+/* ===== DESCRIPTION SECTION ===== */
+.desc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 0 4rem;
+  gap: 3rem;
+}
+
+.desc-content {
+  flex: 1;
+  font-size: 2rem;
+  min-width: 300px;
+}
+
+.desc video {
+  flex: 1;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(220, 20, 60, 0.3);
+}
+
+/* ===== SHOWCASE ===== */
+.showcase {
+  min-height: 100vh;
+  width: 100%;
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.showcase h1 {
+  padding: 2rem 0;
+  font-size: 2rem;
+}
+
+.row {
+  margin-top: 3rem;
+}
+
+.cards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.custom-card {
+  position: absolute;
+  width: 80%;
+  height: 70vh;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.custom-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card1 {}
+.card2 {top: 30px; }
+.card3 {top: 60px; }
+.card4 {top: 90px; }
+.card5 { background-color: crimson; top: 120px; }
+
+/* ===== PROMO ===== */
+.promo {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.promo h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  word-break: break-word;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: crimson;
+  color: black;
+  width: 100%;
+  min-height: 60vh;
+  padding: 3rem 5rem;
+  position: relative;
+}
+
+.upper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.upperlinktitle {
+  margin-bottom: 1rem;
+}
+
+.upper a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+.left, .socials, .links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lower {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+/* ====== RESPONSIVE ====== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .intro h1 {
+    font-size: 3.5rem;
+  }
+
+  .desc {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .showcase h1 {
+    margin-bottom: 3rem;
+  }
+
+  .desc-content {
+    font-size: 1.5rem;
+  }
+
+  .promo h1 {
+    font-size: 4rem;
+  }
+
+  .navbar {
+    padding: 1rem 2rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .desc {
+    flex-direction: column;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .showcase h1 {
+    font-size: 1rem;
+    padding: 3rem 0;
+  }
+
+  .custom-card {
+    height: 50vh;
+    background-position: center;
+  }
+
+  .card1 img { content: url('../vid/gtaVMobileView.jpg'); }
+  .card2 img { content: url('../vid/gtasaMobileView.jpg'); }
+  .card3 img { content: url('../vid/rdr2mobileView.jpg'); }
+  .card4 img { content: url('../vid/skyrimMobileView.jpg'); }
+
+  .navbar, .h1 {
+    font-size: 0.7rem;
+  }
+
+  .navbar .lib {
+    font-size: 0.5rem;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .desc {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .desc-content {
+    font-size: 1.2rem;
+  }
+
+  .promo h1 {
+    font-size: 1.8rem;
+  }
+
+  .upper {
+    font-size: 0.8rem;
+  }
+  footer {
+    height: 80vh;
+    padding: 2rem;
+  }
+
+  .lower {
+    font-size: 1.3rem;
+  }
+}

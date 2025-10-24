@@ -1,0 +1,100 @@
+.tags {
+  padding: 8rem;
+}
+
+.tags h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.game-tags {
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #888 transparent;
+  scroll-behavior: smooth;
+}
+
+.tag-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.3s, transform 0.3s;
+  flex-shrink: 0; /* keeps tag width consistent while scrolling */
+}
+
+.tag-link:hover {
+  background: #B71C1C;
+  transform: scale(1.05);
+}
+
+/* Scrollbar styling (WebKit browsers) */
+.game-tags::-webkit-scrollbar {
+  height: 6px;
+}
+
+.game-tags::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.game-tags::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.game-tags::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .tags {
+    padding: 4rem 3rem;
+  }
+
+  .game-tags {
+    gap: 0.8rem;
+    padding: 1.5rem;
+  }
+
+  .tag-link {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.9rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 700px) {
+  .tags {
+    padding: 2.5rem 1rem;
+  }
+
+  .game-tags {
+    gap: 0.6rem;
+    padding: 1rem 0.5rem;
+    overflow-x: auto;
+  }
+
+  .tag-link {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+  }
+
+  /* make horizontal scrolling smoother for touch devices */
+  .game-tags {
+    -webkit-overflow-scrolling: touch;
+  }
+}
