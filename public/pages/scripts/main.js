@@ -18,7 +18,7 @@ bottomDiv.classList.add("bottom-div");
 
 async function gameDetail(id) {
   try {
-    const res = await fetch(`http://localhost:8080/api/games/${id}`);
+    const res = await fetch(`/api/games/${id}`);
     if(!res.ok) {
       throw new Error("Could not fetch game");
     }
