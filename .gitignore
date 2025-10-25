@@ -1,6 +1,5 @@
 node_modules/
 .env
-logs/
-*.logs
+dist/
+.vscode/
 .DS_Store
-Thumbs.db
