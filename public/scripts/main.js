@@ -23,7 +23,7 @@ async function fetchGame(
 ) {
   try {
     // Build API URL
-    let url = `http://localhost:8080/api/games?page=${page}&page_size=${page_size}`;
+    let url = `/api/games?page=${page}&page_size=${page_size}`;
     if (search) url += `&search=${encodeURIComponent(search)}`;
     if (genre) url += `&genres=${encodeURIComponent(genre)}`;
     if (platforms) url += `&platforms=${encodeURIComponent(platforms)}`;
