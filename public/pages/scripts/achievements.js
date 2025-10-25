@@ -2,7 +2,7 @@
 
 async function getGameAchievements(id) {
   try {
-    const response = await fetch(`http://localhost:8080/api/games/${id}/achievements`);
+    const response = await fetch(`/api/games/${id}/achievements`);
     if(!response) {
       throw new Error("Failed fetching achievements");
     }

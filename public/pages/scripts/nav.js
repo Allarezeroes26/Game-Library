@@ -7,7 +7,7 @@ const platformBtn = document.querySelector(".platform-dropbtn");
 
 async function dropGenre(page = 1, page_size = 20) {
   try {
-    const res = await fetch(`http://localhost:8080/api/genres?page=${page}&page_size=${page_size}`);
+    const res = await fetch(`/api/genres?page=${page}&page_size=${page_size}`);
     if (!res.ok) throw new Error("Could not fetch genres");
 
     const data = await res.json();
@@ -34,7 +34,7 @@ async function dropGenre(page = 1, page_size = 20) {
 //Getting list of Platform
 async function dropPlatform(page = 1, page_size = 20) {
   try {
-    const res = await fetch(`http://localhost:8080/api/platforms?page=${page}&page_size=${page_size}`);
+    const res = await fetch(`/api/platforms?page=${page}&page_size=${page_size}`);
     if (!res.ok) throw new Error("Error fetching platforms");
 
     const data = await res.json();

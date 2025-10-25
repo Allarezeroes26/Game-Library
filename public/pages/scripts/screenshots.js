@@ -4,7 +4,7 @@ const rightSide = document.querySelector(".right-side");
 
 async function getScreenshots(id) {
   try {
-    const res = await fetch(`http://localhost:8080/api/games/${id}/screenshots`);
+    const res = await fetch(`/api/games/${id}/screenshots`);
     if (!res.ok) throw new Error("Could not fetch screenshots");
 
     const data = await res.json();

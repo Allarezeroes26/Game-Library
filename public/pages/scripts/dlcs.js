@@ -2,7 +2,7 @@
 
 async function getdlcs(id) {
   try {
-    const response = await fetch(`http://localhost:8080/api/games/${id}/additions`);
+    const response = await fetch(`/api/games/${id}/additions`);
     if(!response.ok) {
       throw new Error("Failed fetching dlcs");
     }

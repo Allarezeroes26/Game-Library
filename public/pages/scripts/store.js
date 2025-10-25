@@ -18,7 +18,7 @@ async function loadStores() {
 // Fetches and displays stores that sell a specific game
 async function getGameStore(id) {
   try {
-    const response = await fetch(`http://localhost:8080/api/games/${id}/stores`);
+    const response = await fetch(`/api/games/${id}/stores`);
     if (!response.ok) throw new Error("Error fetching store!");
 
     const data = await response.json();

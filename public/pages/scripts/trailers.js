@@ -1,7 +1,7 @@
 // Getting game trailers
 async function getGameTrailers(id, trailersSection) {
   try {
-    const res = await fetch(`http://localhost:8080/api/games/${id}/movies`);
+    const res = await fetch(`/api/games/${id}/movies`);
     if (!res.ok) {
       throw new Error("Could not fetch game trailer");
     }

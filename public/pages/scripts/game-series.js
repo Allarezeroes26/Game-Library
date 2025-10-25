@@ -2,7 +2,7 @@
 
 async function getGameSeries(id) {
   try {
-    const res = await fetch(`http://localhost:8080/api/games/${id}/game-series`);
+    const res = await fetch(`/api/games/${id}/game-series`);
     if (!res.ok) throw new Error("Error getting game series");
 
     const data = await res.json();
