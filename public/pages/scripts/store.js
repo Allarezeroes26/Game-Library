@@ -3,7 +3,7 @@ let storeMap = {};
 
 // Loads all stores and saves them in storeMap
 async function loadStores() {
-  const res = await fetch("http://localhost:8080/api/stores");
+  const res = await fetch("/api/stores");
   const data = await res.json();
 
   // Map each store’s ID to its name and domain
