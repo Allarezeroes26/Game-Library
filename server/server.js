@@ -36,6 +36,6 @@ app.use("/api/stores/:id", storeRouter);
 app.use("/api/stores", storeRouter);
 app.use("/api/tags/:id", tagsRouter);
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 })
 
