@@ -30,7 +30,7 @@ It displays game details such as **trailers, screenshots, achievements, DLCs, re
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ Setup Instructions (Local)
 
 ### 1. Clone the repository
 ```
