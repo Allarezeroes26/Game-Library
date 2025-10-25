@@ -6,7 +6,7 @@ It displays game details such as **trailers, screenshots, achievements, DLCs, re
 
 ---
 
-## Features
+## 🚀 Features
 
 -  Search games by title  
 -  Filter by genres, platforms, developers, and tags  
@@ -103,16 +103,16 @@ All endpoints return JSON data. Use query parameters or route params (`:id`, `:s
 
 ---
 
-### My notes
+### 🗒️ MY NOTES!!!
 - Use Async/Await for all api calls
 - Animations in Game Lib intro was made with GSAP
 ---
 
-## Created By
-Erwin Bacani [Github](https://github.com/Allarezeroes26), [Linkedin](https://github.com/Allarezeroes26), [Facebook](https://www.facebook.com/erwinbacani2024).
+## 🧑‍💻 Created By
+Erwin Bacani [Github](https://github.com/Allarezeroes26), [Linkedin](https://github.com/Allarezeroes26).
 
 ---
 
-## License
+## ⚖️ License
 This project is licensed under MIT License<br/>
 Feel free to use, modify, and share it — just credit the original.
