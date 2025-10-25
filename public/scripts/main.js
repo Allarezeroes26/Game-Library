@@ -72,7 +72,7 @@ async function fetchGame(
         } else if (developers) {
           let devName = null;
           try {
-            const res = await fetch(`http://localhost:8080/api/developers/${developers}`);
+            const res = await fetch(`/api/developers/${developers}`);
             if (res.ok) {
               const devData = await res.json();
               devName = devData.name;
@@ -89,7 +89,7 @@ async function fetchGame(
 
           if (!tagName) {
             try {
-              const res = await fetch(`http://localhost:8080/api/tags/${tags}`);
+              const res = await fetch(`/api/tags/${tags}`);
               if (res.ok) {
                 const tagData = await res.json();
                 tagName = tagData.name;
