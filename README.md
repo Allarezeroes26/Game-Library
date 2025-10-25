@@ -26,7 +26,7 @@ It displays game details such as **trailers, screenshots, achievements, DLCs, re
 | **Backend** | Node.js, Express.js |
 | **API Source** | Custom REST endpoints from RAWG API wrapper |
 | **Version Control** | Git & GitHub |
-| **Runtime** | Node.js (v18+) |
+| **Deployment** | Render |
 
 ---
 
