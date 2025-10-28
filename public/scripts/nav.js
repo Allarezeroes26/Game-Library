@@ -3,9 +3,7 @@ const genreBtn = document.querySelector(".genre-dropbtn");
 const platformContent = document.querySelector(".platform-content");
 const platformBtn = document.querySelector(".platform-dropbtn");
 
-/** 
- * Sets up a dropdown menu for a button (show on hover, hide on leave)
- */
+// Sets up a dropdown menu for a button (show on hover, hide on leave)
 function setupDropdown(btn, dropdown) {
   let timeout;
 
@@ -45,9 +43,7 @@ function setupDropdown(btn, dropdown) {
 setupDropdown(genreBtn, genreContent);
 setupDropdown(platformBtn, platformContent);
 
-/** 
- * Fetches and displays genres inside the genre dropdown
- */
+// Fetches and displays genres inside the genre dropdown
 async function dropGenre(page = 1, page_size = 20) {
   try {
     const res = await fetch(`/api/genres?page=${page}&page_size=${page_size}`);
@@ -82,9 +78,8 @@ async function dropGenre(page = 1, page_size = 20) {
   }
 }
 
-/** 
- * Fetches and displays platforms inside the platform dropdown
- */
+
+// Fetches and displays platforms inside the platform dropdown
 async function dropPlatform(page = 1, page_size = 20) {
   try {
     const res = await fetch(`/api/platforms?page=${page}&page_size=${page_size}`);

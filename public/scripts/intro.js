@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // Register GSAP plugins
   gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger, SplitText, TextPlugin, ScrollToPlugin);
 
-  // ── Intro animation ──
+  // Intro animation
   let introTl = gsap.timeline();
   let introSplit = new SplitText(".intro h1", { type: "lines, words, chars" });
 
@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
   introTl.from(".intro p", { duration: 1, y: 50, autoAlpha: 0 }, ">");
 
-  // ── Description section ──
+  // Description section 
   let descTl = gsap.timeline({
     scrollTrigger: { trigger: ".desc", start: "top top", end: "bottom middle" }
   });
   descTl.from(".desc-content", { duration: 1, opacity: 0, x: 50 });
   descTl.from("video", { duration: 1, opacity: 0, x: -50 }, "<");
 
-  // ── Showcase scroll animation (cards) ──
+  // Showcase scroll animation (cards)
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".showcase",
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   tl.to(".card3", { scale: 0.98, yPercent: -0.85, opacity: 0.9 }, "-=0.3");
   tl.to(".card4", { scale: 0.98, yPercent: -0.85, opacity: 0.9 }, "-=0.3");
 
-  // ── Promo section text animation ──
+  // Promo section text animation
   let promoSplit = new SplitText(".promo h1", { type: "words" });
   let promoTl = gsap.timeline({
     scrollTrigger: {
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     gsap.to(words, { y: "+=10", repeat: -1, yoyo: true, ease: "sine.inOut", duration: 2 });
   }
 
-  // ── Footer fade-in on scroll ──
+  // Footer fade-in on scroll
   gsap.registerPlugin(ScrollTrigger);
   gsap.set("footer", { yPercent: 50, opacity: 0 });
   gsap.to("footer", {
