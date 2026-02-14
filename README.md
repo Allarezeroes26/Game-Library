@@ -1,6 +1,6 @@
 # 🎮 Game Library
 
-A responsive web application that lets users explore games by **genre, platform, developer, and tags** — powered by a RESTful API built with Node.js and Express.  
+A web application that lets users explore games by **genre, platform, developer, and tags** — powered by a RESTful API built with Node.js and Express.  
 
 It displays game details such as **trailers, screenshots, achievements, DLCs, related games, and store links**, all fetched dynamically.
 
