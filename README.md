@@ -108,11 +108,6 @@ All endpoints return JSON data. Use query parameters or route params (`:id`, `:s
 - Animations in Game Lib intro was made with GSAP
 ---
 
-## 🧑‍💻 Created By
-Erwin Bacani [Github](https://github.com/Allarezeroes26), [Linkedin](https://github.com/Allarezeroes26).
-
----
-
 ## Demo
 https://game-library-v8cx.onrender.com
 
